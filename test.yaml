@@ -1,0 +1,16 @@
+name: Vani
+Age: 23
+Address : "hsdk:dsjd"
+Active: true
+Key:
+  subkey : value
+  subkey2 : 3
+array:
+  - itrm1
+  - item2
+  - item3 :
+    - subitem1 : value1
+    - subitem2 : value2
+longtext : >
+  Hi all how are you
+  hello world
