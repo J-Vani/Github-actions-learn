@@ -14,8 +14,15 @@ jobs:
           npm -v
       - name: python command
         run: | 
-          import platform
-          print(platform.processor())
           print("Hello !Namaste")
           shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
+
    
