@@ -7,10 +7,15 @@ jobs:
         - name: List files
           run: |
             pwd
-            ls -a  
-          #present working directory and list of files init action
+            ls -a 
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
+            echo "${{ github.token }}" 
+          #present working directory and list of files init action and to get the token id, repository name,workspace by using environmental variable.
+
         - name: checkout
-        #to check the action tag that is generated for the coomit
+        #to check the action tag that is generated for the coomit or get commit tag id
           uses: actions/checkout@v1
         - name: list of files after checkout
           run: |
