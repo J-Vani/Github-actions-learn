@@ -4,10 +4,22 @@ jobs:
     run-github-actions:
       runs-on: ubuntu-latest
       steps:
+        - name: List files
+          run: |
+            pwd
+            ls -a  
+          #present working directory and list of files init action
+        - name: checkout
+        #to check the action tag that is generated for the coomit
+          uses: actions/checkout@v1
+        - name: list of files after checkout
+          run: |
+            pwd
+            ls -a  
         - name: Simple java script action
           id: greet
-          uses: actions/hello-world-javascript-action@v1
+          uses: actions/hello-world-javascript-action@v1 #v1 is the version available and the name is from git javascript code
           with:
             who-to-greet: Github
         - name: Log Greeting Time
-          run: echo "${{ steps.greet.outputs.time }}"
+          run: echo "${{ steps.greet.outputs.time }}" #hear we are publishing the output which is time of greetings.
